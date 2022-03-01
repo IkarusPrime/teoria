@@ -42,7 +42,7 @@ public class CustomerService {
 				
 	}
 	
-public void update (String id) {
+public String update (String id) {
 		
 		String response = "";
 		Optional<Customer> customerFound = customerrepository.findById(id);
@@ -55,7 +55,7 @@ public void update (String id) {
 		}else {
 			response += "customer not found";
 		}
-				
+		return response;
 	}
 
 }
